@@ -34,9 +34,6 @@ export async function initializeBot(): Promise<void> {
         if (webhookInfo.url !== webhookUrl) {
             logger.warn(`Webhook URL reported by Telegram (${webhookInfo.url}) differs from configured URL (${webhookUrl})`);
         }
-        if (webhookInfo.last_error_message) {
-            logger.warn(`Telegram reported a webhook error on setup: ${webhookInfo.last_error_message}`);
-        }
 
         logger.info('Webhook set successfully.');
 
